@@ -1,0 +1,6 @@
+{
+  "name": "ReviewInsight - Restaurant Review Analyzer",
+  "description": "Professional Business Review Analyzer, Real-Time Sentiment Analytics Dashboard & 24/7 Customer Support Chatbot by Vishapal Yadav.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

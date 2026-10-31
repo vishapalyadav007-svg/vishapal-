@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ReviewInsight – Professional Business Review Analyzer & Customer Support Platform by Vishapal Yadav with secure owner access." />
+  <title>ReviewInsight – Business Review Analyzer &amp; Support</title>
+  <meta property="og:title" content="ReviewInsight – Business Review Analyzer &amp; Support" />
+  <meta property="og:description" content="Professional Business Review Analyzer, Real-Time Sentiment Analytics Dashboard & 24/7 Customer Support Chatbot by Vishapal Yadav." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- OWNER LOGIN SCREEN -->
+  <section class="login-screen" id="login-screen" aria-labelledby="login-title">
+    <div class="login-card">
+      <div class="login-brand">
+        <span class="login-mark" aria-hidden="true">RI</span>
+        <div>
+          <strong>ReviewInsight</strong>
+          <span>Business Review Analyzer</span>
+        </div>
+      </div>
+
+      <h1 id="login-title">Owner Portal.</h1>
+      <p class="login-intro">
+        Welcome to the Business Review Analyzer &amp; Customer Support Suite. Enter your demo password to unlock executive analytics.
+      </p>
+
+      <div class="login-divider">Owner access</div>
+
+      <form class="owner-login" id="owner-login" novalidate>
+        <h2>Owner Login</h2>
+        <p>Enter the demo password to unlock ReviewInsight.</p>
+        <label for="owner-password" class="visually-hidden">Demo password</label>
+        <div class="password-row">
+          <input
+            id="owner-password"
+            name="owner-password"
+            type="password"
+            autocomplete="current-password"
+            required
+            aria-describedby="login-message"
+            placeholder="Enter demo password"
+          />
+          <button class="password-toggle" id="password-toggle" type="button" aria-label="Show password" aria-pressed="false">
+            👁
+          </button>
+        </div>
+        <button class="button primary unlock-button" type="submit">Unlock Website</button>
+        <p class="login-message" id="login-message" aria-live="polite"></p>
+      </form>
+
+      <p class="demo-note">
+        <strong>Demo credentials:</strong> Demo Password: <code>21062006</code><br />
+        Protected with secure server-side verification.
+      </p>
+    </div>
+  </section>
+
+  <!-- UNLOCKED MAIN WEBSITE CONTENT -->
+  <div id="site-content" hidden>
+    <a class="skip" href="#main">Skip to main content</a>
+    <header>
+      <nav class="container nav" aria-label="Main navigation">
+        <a class="brand" href="#home">
+          <span class="brand-badge">RI</span>
+          <div>ReviewInsight <span>· Business Suite</span></div>
+        </a>
+        <div class="links">
+          <a href="#analyzer">Review Analyzer</a>
+          <a href="#dashboard">Analytics Dashboard</a>
+          <a href="#features">Features</a>
+          <a href="#faq">Troubleshooting &amp; FAQ</a>
+          <a href="#platform">Overview</a>
+          <button type="button" id="nav-logout" class="button secondary" style="min-height:32px;padding:4px 10px;font-size:0.78rem">
+            🔒 Logout
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Enterprise Feedback Intelligence &amp; Customer Support</p>
+            <h1>Turn Customer Reviews Into <em>Business Growth</em>.</h1>
+            <p class="hero-copy">
+              Analyze customer dining and service feedback in real time, detect recurring operational complaints, project accurate star ratings, and draft high-converting manager replies instantly.
+            </p>
+            <div class="actions">
+              <a class="button primary" href="#analyzer">Review Analyzer ↓</a>
+              <a class="button secondary" href="#dashboard">View Analytics Dashboard</a>
+              <a class="button secondary" href="#faq">Troubleshooting &amp; Support</a>
+            </div>
+            <p class="small-note">
+              Built for restaurant owners, general managers, and hospitality teams seeking actionable customer intelligence.
+            </p>
+          </div>
+
+          <aside class="hero-panel" aria-label="Business Intelligence Metrics">
+            <div class="panel-top">
+              <span>Executive Overview</span>
+              <i class="dot" aria-hidden="true"></i>
+            </div>
+            <h2>Actionable Customer Insights.</h2>
+            <p>Zero manual guesswork. Discover exactly what customers appreciate and what issues demand your immediate management attention.</p>
+            <div class="mini-stats">
+              <div class="mini"><b>100%</b><span>Live Analysis</span></div>
+              <div class="mini"><b>4</b><span>Business Aspects</span></div>
+              <div class="mini"><b>5</b><span>Summary KPIs</span></div>
+              <div class="mini"><b>24/7</b><span>Support Chatbot</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- REVIEW ANALYZER -->
+      <section class="section" id="analyzer">
+        <div class="container">
+          <div class="heading">
+            <p class="eyebrow">Business Review Analyzer</p>
+            <h2>Real-Time Sentiment &amp; Aspect Engine</h2>
+            <p>
+              Paste any customer review or pick a preset. The analytics dashboard below automatically updates with every submission.
+            </p>
+          </div>
+
+          <!-- Presets -->
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:16px;">
+            <span style="font-size:0.85rem;font-weight:700;color:var(--muted);">Try sample reviews:</span>
+            <button class="button secondary preset-btn" data-preset="rave" type="button">⭐ 5-Star Rave</button>
+            <button class="button secondary preset-btn" data-preset="disaster" type="button">⭐ 1-Star Disaster</button>
+            <button class="button secondary preset-btn" data-preset="mixed" type="button">⭐ 3-Star Mixed</button>
+            <button class="button secondary preset-btn" data-preset="ambiance" type="button">⭐ Ambiance Complaint</button>
+          </div>
+
+          <div class="analyzer-grid">
+            <div class="card" style="padding:24px;">
+              <h3 style="margin:0 0 10px;">Customer Review Input</h3>
+              <p style="margin:0 0 14px;font-size:0.86rem;color:var(--muted);">
+                Paste customer feedback from Google Reviews, Yelp, TripAdvisor, Zomato, or customer emails.
+              </p>
+              <textarea
+                id="review-input"
+                rows="6"
+                placeholder="Paste customer review here (e.g. The pizza was fresh and delicious, but service was slow)..."
+              ></textarea>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;">
+                <span id="char-count" style="font-size:0.8rem;color:var(--muted);">0 characters</span>
+                <button class="button primary" id="analyze-btn" type="button">Analyze Review ↓</button>
+              </div>
+              <p id="analyzer-msg" style="color:#ef4444;margin:10px 0 0;font-size:0.85rem;display:none;"></p>
+            </div>
+
+            <!-- Analysis Result Card -->
+            <div class="card" id="result-card" style="padding:24px;">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+                <div>
+                  <span id="res-badge" class="pill badge-positive">POSITIVE</span>
+                  <div style="margin-top:8px;font-size:1.3rem;font-weight:800;color:var(--ink);">
+                    <span id="res-stars" style="color:#f59e0b;">★★★★★</span>
+                    <span id="res-rating-text" style="font-size:1.1rem;margin-left:4px;">5.0 / 5</span>
+                  </div>
+                </div>
+                <div style="text-align:right;">
+                  <span style="font-size:0.75rem;color:var(--muted);text-transform:uppercase;font-weight:800;">Sentiment Score</span>
+                  <div id="res-score" style="font-size:1.8rem;font-weight:900;color:var(--blue);">92%</div>
+                  <span id="res-conf" style="font-size:0.75rem;color:var(--muted);">High confidence</span>
+                </div>
+              </div>
+
+              <!-- Aspects -->
+              <div style="margin-top:20px;padding-top:14px;border-top:1px solid var(--line);">
+                <h4 style="margin:0 0 10px;font-size:0.9rem;">Aspect Ratings Breakdown</h4>
+                <div style="display:grid;gap:8px;">
+                  <div>
+                    <div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:2px;">
+                      <span>Food Quality</span><span id="aspect-food-val">90%</span>
+                    </div>
+                    <div class="track" style="height:6px;margin:0;"><div class="fill" id="aspect-food-bar" style="width:90%"></div></div>
+                  </div>
+                  <div>
+                    <div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:2px;">
+                      <span>Service Hospitality</span><span id="aspect-serv-val">85%</span>
+                    </div>
+                    <div class="track" style="height:6px;margin:0;"><div class="fill" id="aspect-serv-bar" style="width:85%"></div></div>
+                  </div>
+                  <div>
+                    <div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:2px;">
+                      <span>Ambiance &amp; Cleanliness</span><span id="aspect-ambi-val">75%</span>
+                    </div>
+                    <div class="track" style="height:6px;margin:0;"><div class="fill" id="aspect-ambi-bar" style="width:75%"></div></div>
+                  </div>
+                  <div>
+                    <div style="display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:2px;">
+                      <span>Value for Money</span><span id="aspect-val-val">80%</span>
+                    </div>
+                    <div class="track" style="height:6px;margin:0;"><div class="fill" id="aspect-val-bar" style="width:80%"></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Highlights -->
+              <div id="res-keywords" style="margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;"></div>
+
+              <!-- Suggested Reply -->
+              <div style="margin-top:16px;padding:12px;background:#f8fafc;border-radius:10px;border:1px solid var(--line);">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+                  <b style="font-size:0.75rem;text-transform:uppercase;color:var(--muted);">Automated Manager Response</b>
+                  <button class="button secondary" id="copy-reply-btn" type="button" style="min-height:28px;padding:2px 8px;font-size:0.74rem;">
+                    📋 Copy Reply
+                  </button>
+                </div>
+                <p id="res-reply" style="margin:0;font-size:0.84rem;color:#1e293b;line-height:1.5;"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANALYTICS DASHBOARD -->
+      <section class="section soft" id="dashboard">
+        <div class="container">
+          <div class="heading">
+            <p class="eyebrow">Enterprise Analytics</p>
+            <h2>Review Analytics Dashboard</h2>
+            <p>Understand your customers' feedback at a glance. Every number is calculated dynamically from analyzed reviews.</p>
+          </div>
+
+          <!-- Empty state -->
+          <div id="dash-empty" class="card" style="display:none;padding:50px 20px;text-align:center;max-width:600px;margin:auto;">
+            <span style="font-size:2.5rem;display:block;margin-bottom:12px;">📊</span>
+            <h3 style="margin:0 0 8px;">No customer reviews available yet.</h3>
+            <p style="color:var(--muted);font-size:0.9rem;margin:0 0 16px;">
+              Submit and analyze customer reviews in the tool above to generate real-time metrics, sentiment trends, dish ratings, and operational suggestions.
+            </p>
+            <a class="button primary" href="#analyzer">Go to Review Analyzer ↑</a>
+          </div>
+
+          <!-- Dashboard Content -->
+          <div id="dash-content">
+            <!-- Filter Bar -->
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:10px;">
+              <div style="display:flex;gap:6px;">
+                <button class="button secondary filter-btn active" data-filter="all" type="button" style="min-height:30px;padding:4px 12px;font-size:0.8rem;">All Reviews</button>
+                <button class="button secondary filter-btn" data-filter="7days" type="button" style="min-height:30px;padding:4px 12px;font-size:0.8rem;">Last 7 Days</button>
+                <button class="button secondary filter-btn" data-filter="30days" type="button" style="min-height:30px;padding:4px 12px;font-size:0.8rem;">Last 30 Days</button>
+              </div>
+              <button class="button secondary" id="clear-reviews-btn" type="button" style="min-height:30px;padding:4px 12px;font-size:0.8rem;color:#ef4444;">
+                Clear Review History
+              </button>
+            </div>
+
+            <!-- ROW 1: 5 SUMMARY CARDS -->
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:14px;margin-bottom:24px;">
+              <article class="card" style="padding:18px;">
+                <span style="font-size:0.75rem;font-weight:700;color:var(--muted);text-transform:uppercase;">Total Reviews</span>
+                <div id="card-total" style="font-size:1.8rem;font-weight:900;color:var(--ink);margin:4px 0;">0</div>
+                <span style="font-size:0.75rem;color:var(--muted);">All customer submissions</span>
+              </article>
+              <article class="card" style="padding:18px;border-top:3px solid #10b981;">
+                <span style="font-size:0.75rem;font-weight:700;color:#0d6852;text-transform:uppercase;">Positive Reviews</span>
+                <div id="card-pos" style="font-size:1.8rem;font-weight:900;color:#10b981;margin:4px 0;">0</div>
+                <span id="card-pos-sub" style="font-size:0.75rem;color:var(--muted);">0% of total reviews</span>
+              </article>
+              <article class="card" style="padding:18px;border-top:3px solid #ef4444;">
+                <span style="font-size:0.75rem;font-weight:700;color:#991b1b;text-transform:uppercase;">Negative Reviews</span>
+                <div id="card-neg" style="font-size:1.8rem;font-weight:900;color:#ef4444;margin:4px 0;">0</div>
+                <span id="card-neg-sub" style="font-size:0.75rem;color:var(--muted);">0% of total reviews</span>
+              </article>
+              <article class="card" style="padding:18px;border-top:3px solid #64748b;">
+                <span style="font-size:0.75rem;font-weight:700;color:#475569;text-transform:uppercase;">Neutral Reviews</span>
+                <div id="card-neu" style="font-size:1.8rem;font-weight:900;color:#64748b;margin:4px 0;">0</div>
+                <span id="card-neu-sub" style="font-size:0.75rem;color:var(--muted);">0% of total reviews</span>
+              </article>
+              <article class="card" style="padding:18px;border-top:3px solid #f59e0b;">
+                <span style="font-size:0.75rem;font-weight:700;color:#b45309;text-transform:uppercase;">Average Customer Rating</span>
+                <div id="card-avg" style="font-size:1.8rem;font-weight:900;color:#f59e0b;margin:4px 0;">0.0 ★</div>
+                <span id="card-avg-sub" style="font-size:0.75rem;color:var(--muted);">Out of 5.0 stars</span>
+              </article>
+            </div>
+
+            <!-- ROW 2: TRENDS & SENTIMENT BREAKDOWN -->
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(340px, 1fr));gap:20px;margin-bottom:24px;">
+              <div class="card" style="padding:24px;">
+                <h3 style="margin:0 0 4px;font-size:1.1rem;">Review Trends Over Time</h3>
+                <p style="margin:0 0 16px;color:var(--muted);font-size:0.82rem;">Volume and average customer rating across active timeline.</p>
+                <div id="trend-chart" style="height:170px;display:flex;align-items:flex-end;gap:16px;padding:16px 8px 10px;background:#fafcff;border-radius:12px;border:1px solid #e1eaf8;overflow-x:auto;"></div>
+              </div>
+
+              <div class="card" style="padding:24px;">
+                <h3 style="margin:0 0 4px;font-size:1.1rem;">Customer Sentiment Breakdown</h3>
+                <p style="margin:0 0 16px;color:var(--muted);font-size:0.82rem;">Share of positive, neutral and negative customer feedback.</p>
+                <div style="display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;">
+                  <div style="position:relative;width:140px;height:140px;">
+                    <svg viewBox="0 0 36 36" style="width:100%;height:100%;transform:rotate(-90deg);">
+                      <circle cx="18" cy="18" r="14" fill="none" stroke="#e6edfa" stroke-width="4.2" />
+                      <circle id="donut-circle-pos" cx="18" cy="18" r="14" fill="none" stroke="#10b981" stroke-width="4.2" stroke-dasharray="0 100" stroke-linecap="round" />
+                      <circle id="donut-circle-neu" cx="18" cy="18" r="14" fill="none" stroke="#64748b" stroke-width="4.2" stroke-dasharray="0 100" />
+                      <circle id="donut-circle-neg" cx="18" cy="18" r="14" fill="none" stroke="#ef4444" stroke-width="4.2" stroke-dasharray="0 100" />
+                    </svg>
+                    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                      <span id="donut-pos-pct" style="font-size:1.4rem;font-weight:900;color:var(--ink);">0%</span>
+                      <span style="font-size:0.68rem;color:#0d6852;font-weight:800;text-transform:uppercase;">Positive</span>
+                    </div>
+                  </div>
+                  <div style="display:grid;gap:8px;">
+                    <div style="display:flex;align-items:center;gap:8px;font-size:0.84rem;"><span style="width:12px;height:12px;border-radius:3px;background:#10b981;"></span><span>Positive: <b id="legend-pos">0 (0%)</b></span></div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:0.84rem;"><span style="width:12px;height:12px;border-radius:3px;background:#64748b;"></span><span>Neutral: <b id="legend-neu">0 (0%)</b></span></div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:0.84rem;"><span style="width:12px;height:12px;border-radius:3px;background:#ef4444;"></span><span>Negative: <b id="legend-neg">0 (0%)</b></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ROW 3: RATING DISTRIBUTION & COMMON KEYWORDS -->
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(340px, 1fr));gap:20px;margin-bottom:24px;">
+              <div class="card" style="padding:24px;">
+                <h3 style="margin:0 0 4px;font-size:1.1rem;">Rating Distribution</h3>
+                <p style="margin:0 0 16px;color:var(--muted);font-size:0.82rem;">Counts and percentages across 1 to 5 star ratings.</p>
+                <div style="display:grid;gap:10px;">
+                  <div style="display:grid;grid-template-columns:55px 1fr 70px;align-items:center;gap:10px;font-size:0.82rem;">
+                    <span>5-Star</span><div style="height:12px;border-radius:999px;background:#e5eefc;overflow:hidden;"><div id="bar-stars-5" style="height:100%;width:0%;background:#10b981;border-radius:inherit;"></div></div><span id="label-stars-5" style="text-align:right;font-weight:700;">0 (0%)</span>
+                  </div>
+                  <div style="display:grid;grid-template-columns:55px 1fr 70px;align-items:center;gap:10px;font-size:0.82rem;">
+                    <span>4-Star</span><div style="height:12px;border-radius:999px;background:#e5eefc;overflow:hidden;"><div id="bar-stars-4" style="height:100%;width:0%;background:#3b82f6;border-radius:inherit;"></div></div><span id="label-stars-4" style="text-align:right;font-weight:700;">0 (0%)</span>
+                  </div>
+                  <div style="display:grid;grid-template-columns:55px 1fr 70px;align-items:center;gap:10px;font-size:0.82rem;">
+                    <span>3-Star</span><div style="height:12px;border-radius:999px;background:#e5eefc;overflow:hidden;"><div id="bar-stars-3" style="height:100%;width:0%;background:#f59e0b;border-radius:inherit;"></div></div><span id="label-stars-3" style="text-align:right;font-weight:700;">0 (0%)</span>
+                  </div>
+                  <div style="display:grid;grid-template-columns:55px 1fr 70px;align-items:center;gap:10px;font-size:0.82rem;">
+                    <span>2-Star</span><div style="height:12px;border-radius:999px;background:#e5eefc;overflow:hidden;"><div id="bar-stars-2" style="height:100%;width:0%;background:#f97316;border-radius:inherit;"></div></div><span id="label-stars-2" style="text-align:right;font-weight:700;">0 (0%)</span>
+                  </div>
+                  <div style="display:grid;grid-template-columns:55px 1fr 70px;align-items:center;gap:10px;font-size:0.82rem;">
+                    <span>1-Star</span><div style="height:12px;border-radius:999px;background:#e5eefc;overflow:hidden;"><div id="bar-stars-1" style="height:100%;width:0%;background:#ef4444;border-radius:inherit;"></div></div><span id="label-stars-1" style="text-align:right;font-weight:700;">0 (0%)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" style="padding:24px;">
+                <h3 style="margin:0 0 4px;font-size:1.1rem;">Common Customer Keywords</h3>
+                <p style="margin:0 0 16px;color:var(--muted);font-size:0.82rem;">Frequently detected positive and negative terms from reviews.</p>
+                <div style="margin-bottom:14px;">
+                  <span style="display:block;font-size:0.74rem;font-weight:800;color:#0d6852;text-transform:uppercase;margin-bottom:8px;">Positive keywords:</span>
+                  <div id="kw-pos" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
+                </div>
+                <div>
+                  <span style="display:block;font-size:0.74rem;font-weight:800;color:#991b1b;text-transform:uppercase;margin-bottom:8px;">Critical keywords:</span>
+                  <div id="kw-neg" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ROW 4: TOP POSITIVE & TOP NEGATIVE FEEDBACK -->
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(340px, 1fr));gap:20px;margin-bottom:24px;">
+              <div class="card" style="padding:24px;background:#f5fdfa;border-color:#b6edd9;">
+                <h3 style="margin:0 0 10px;color:#0d6852;font-size:1.05rem;">Top Positive Customer Feedback</h3>
+                <div id="card-top-pos"></div>
+              </div>
+              <div class="card" style="padding:24px;background:#fff9fa;border-color:#fed5db;">
+                <h3 style="margin:0 0 10px;color:#991b1b;font-size:1.05rem;">Top Negative Customer Feedback</h3>
+                <div id="card-top-neg"></div>
+              </div>
+            </div>
+
+            <!-- ROW 5: DISH PERFORMANCE & WHAT SHOULD YOU IMPROVE? -->
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(340px, 1fr));gap:20px;margin-bottom:24px;">
+              <div class="card" style="padding:24px;">
+                <h3 style="margin:0 0 4px;font-size:1.1rem;">Dish Performance Overview</h3>
+                <p style="margin:0 0 16px;color:var(--muted);font-size:0.82rem;">Dishes identified from customer dining feedback.</p>
+                <div style="margin-bottom:12px;">
+                  <b style="display:block;font-size:0.75rem;color:#0d6852;text-transform:uppercase;margin-bottom:6px;">Praised dishes:</b>
+                  <div id="dish-praised" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
+                </div>
+                <div>
+                  <b style="display:block;font-size:0.75rem;color:#991b1b;text-transform:uppercase;margin-bottom:6px;">Complained dishes:</b>
+                  <div id="dish-complained" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
+                </div>
+              </div>
+
+              <div class="card" style="padding:24px;">
+                <h3 style="margin:0 0 4px;font-size:1.1rem;">What Should You Improve?</h3>
+                <p style="margin:0 0 16px;color:var(--muted);font-size:0.82rem;">Top 3 actionable priorities based on customer complaints.</p>
+                <div id="improve-list"></div>
+              </div>
+            </div>
+
+            <!-- HISTORY TABLE -->
+            <div class="card" style="padding:24px;">
+              <h3 style="margin:0 0 12px;font-size:1.1rem;">Recent Analyzed Reviews Log</h3>
+              <div style="overflow-x:auto;">
+                <table class="table">
+                  <thead>
+                    <tr><th>Review Excerpt</th><th>Rating</th><th>Sentiment</th><th>Score</th><th>Action</th></tr>
+                  </thead>
+                  <tbody id="history-tbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="section" id="features">
+        <div class="container">
+          <div class="heading">
+            <p class="eyebrow">Enterprise Capabilities</p>
+            <h2>Why Businesses Rely on ReviewInsight</h2>
+            <p>Purpose-built for hospitality and retail teams to convert customer feedback into 5-star ratings.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="card feature">
+              <div class="feature-icon">⚡</div>
+              <h3>Instant Sentiment Scoring</h3>
+              <p>Natural Language Processing calculates sentiment polarity in milliseconds, predicting stars and confidence scores.</p>
+            </article>
+            <article class="card feature">
+              <div class="feature-icon">🚨</div>
+              <h3>Critical Complaint Alerts</h3>
+              <p>Highlights operational bottlenecks—slow preparation, staff attitude, or billing issues—before they harm revenue.</p>
+            </article>
+            <article class="card feature">
+              <div class="feature-icon">✍️</div>
+              <h3>Auto-Generated Replies</h3>
+              <p>Drafts empathetic, customer-retention responses with one-click clipboard copying for public review platforms.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TROUBLESHOOTING & FAQ -->
+      <section class="section soft" id="faq">
+        <div class="container">
+          <div class="heading">
+            <p class="eyebrow">Help &amp; Troubleshooting</p>
+            <h2>Frequently Asked Questions</h2>
+            <p>Quick answers to common questions about review scoring, WhatsApp sharing, and password management.</p>
+          </div>
+          <div style="max-width:800px;margin:auto;display:grid;gap:12px;">
+            <div class="card" style="padding:18px;">
+              <h3 style="margin:0 0 6px;font-size:1.02rem;">How do I share the website through WhatsApp?</h3>
+              <p style="margin:0;font-size:0.88rem;color:#334e75;">
+                Copy your public HTTPS link, paste it in any WhatsApp chat, and share demo password <code>21062006</code>. When the recipient opens the link, the Owner Login screen unlocks upon entering the password.
+              </p>
+            </div>
+            <div class="card" style="padding:18px;">
+              <h3 style="margin:0 0 6px;font-size:1.02rem;">How is the sentiment score calculated?</h3>
+              <p style="margin:0;font-size:0.88rem;color:#334e75;">
+                Our NLP engine scans reviews for positive and negative restaurant keywords, maps mentions to Food, Service, Ambiance, and Value, and calculates an overall percentage and 1-5 star score.
+              </p>
+            </div>
+            <div class="card" style="padding:18px;">
+              <h3 style="margin:0 0 6px;font-size:1.02rem;">What should I do if a session expires?</h3>
+              <p style="margin:0;font-size:0.88rem;color:#334e75;">
+                Simply enter demo password <code>21062006</code> on the login screen to issue a new secure session token.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLATFORM OVERVIEW & ARCHITECTURE -->
+      <section class="section" id="platform">
+        <div class="container">
+          <div class="heading">
+            <p class="eyebrow">Platform Overview</p>
+            <h2>Enterprise Business Review Analyzer Architecture</h2>
+            <p>Designed and built by Vishapal Yadav to showcase real-time sentiment analysis, dynamic charts, and responsive SaaS design.</p>
+          </div>
+          <div class="about-grid">
+            <article class="card about-lead">
+              <h3>Project Information</h3>
+              <p>A specialized business SaaS application for hospitality owners to analyze reviews, detect complaints, and automate responses.</p>
+              <dl>
+                <dt>Creator &amp; Engineer</dt><dd>Vishapal Yadav</dd>
+                <dt>Owner Authentication</dt><dd>Protected with Server-Side Validation (Demo: 21062006)</dd>
+              </dl>
+            </article>
+            <div class="about-details">
+              <article class="card about-item">
+                <h3>Core Purpose</h3>
+                <p>Eliminate manual review analysis and produce instant customer satisfaction metrics and manager reply templates.</p>
+              </article>
+              <article class="card about-item">
+                <h3>Deployment Ready</h3>
+                <p>Pre-configured for Netlify, Vercel, and Cloud Run with HTTPS and zero client-side password exposure.</p>
+              </article>
+            </div>
+          </div>
+          <div class="about-actions" style="margin-top:24px;display:flex;justify-content:center;gap:12px;">
+            <button class="button primary" type="button" id="presentation-toggle">Enter Presentation Mode</button>
+            <button class="button secondary" type="button" id="print-bottom">Print / Save as PDF</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        © <span id="year"></span> Vishapal Yadav · ReviewInsight Business Suite · Enterprise Review Intelligence &amp; Customer Support.
+      </div>
+    </footer>
+
+    <div class="presentation-bar">
+      <span>Presentation Mode</span>
+      <button class="button dark-button" id="presentation-exit" type="button">Exit</button>
+    </div>
+
+    <!-- FLOATING CUSTOMER SUPPORT CHATBOT (FIXED BOTTOM-RIGHT) -->
+    <div id="floating-support" style="position:fixed;bottom:24px;right:24px;z-index:9999;">
+      <!-- Toggle button -->
+      <button
+        id="support-fab"
+        type="button"
+        style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:#0f3c88;color:#fff;border:none;border-radius:999px;box-shadow:0 8px 24px rgba(15,60,136,0.35);cursor:pointer;font-weight:700;font-size:0.92rem;"
+      >
+        <span style="font-size:1.25rem;">💬</span>
+        <span>Support &amp; Help</span>
+      </button>
+
+      <!-- Floating Window -->
+      <div
+        id="support-window"
+        style="display:none;width:350px;max-width:calc(100vw - 32px);height:500px;background:#fff;border-radius:16px;box-shadow:0 12px 40px rgba(7,26,59,0.25);border:1px solid #bfd2f0;flex-direction:column;overflow:hidden;"
+      >
+        <div style="padding:12px 16px;background:linear-gradient(135deg, #071a3b, #1546b3);color:#fff;display:flex;justify-content:space-between;align-items:center;">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span>🛠️</span>
+            <div>
+              <b style="display:block;font-size:0.88rem;line-height:1.2;">Support &amp; Troubleshooting</b>
+              <span style="font-size:0.7rem;color:#93c5fd;">Online · 24/7 Guidance</span>
+            </div>
+          </div>
+          <button id="close-support-btn" type="button" style="background:none;border:none;color:#fff;font-size:1.1rem;cursor:pointer;">✕</button>
+        </div>
+
+        <div id="support-messages" style="flex:1;padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;background:#f8fafc;font-size:0.85rem;">
+          <div style="background:#fff;border:1px solid #e2ebfa;padding:10px 12px;border-radius:12px 12px 12px 2px;max-width:85%;line-height:1.45;">
+            👋 Hello! I am your ReviewInsight Support Assistant. How can I assist you with analyzing reviews, troubleshooting login, or answering technical questions?
+          </div>
+        </div>
+
+        <div style="padding:8px 12px;background:#f1f5fd;border-top:1px solid #e2ebfa;display:flex;gap:6px;overflow-x:auto;">
+          <button class="sup-chip" type="button" style="padding:3px 8px;font-size:0.72rem;background:#fff;border:1px solid #bfd2f0;border-radius:999px;cursor:pointer;flex-shrink:0;">How to analyze reviews?</button>
+          <button class="sup-chip" type="button" style="padding:3px 8px;font-size:0.72rem;background:#fff;border:1px solid #bfd2f0;border-radius:999px;cursor:pointer;flex-shrink:0;">Login / password help</button>
+          <button class="sup-chip" type="button" style="padding:3px 8px;font-size:0.72rem;background:#fff;border:1px solid #bfd2f0;border-radius:999px;cursor:pointer;flex-shrink:0;">Handling 1-star reviews</button>
+        </div>
+
+        <div style="padding:10px;background:#fff;border-top:1px solid #e2ebfa;display:flex;gap:6px;">
+          <input id="support-input" type="text" placeholder="Ask a question..." style="flex:1;padding:8px 10px;border:1px solid #bfd2f0;border-radius:8px;font-size:0.85rem;outline:none;" />
+          <button id="send-support-btn" type="button" style="padding:8px 12px;background:#1546b3;color:#fff;border:none;border-radius:8px;font-size:0.85rem;font-weight:700;cursor:pointer;">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
